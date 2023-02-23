@@ -9,6 +9,7 @@ function App() {
 
   return (
           <div className="App">
+            <h1>Rock Paper Scissors Game</h1>
             <div>
             {
               !againstPlayer && !againstComputer ? (
