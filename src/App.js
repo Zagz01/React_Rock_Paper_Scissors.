@@ -14,7 +14,7 @@ function App() {
             <div>
             {
               !againstPlayer && !againstComputer ? (
-                <>
+                <div>
                   <button onClick={() => {
                     setAgainstPlayer(true);
                     setAgainstComputer(false);
@@ -27,7 +27,7 @@ function App() {
                   }}>
                     Play against the computer
                   </button>
-                </>
+                </div>
               ) : againstPlayer ? (
                   <button onClick={() => {
                     setAgainstComputer(true);
