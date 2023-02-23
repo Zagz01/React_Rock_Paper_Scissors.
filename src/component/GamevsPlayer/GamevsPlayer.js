@@ -58,9 +58,6 @@ return (
                         </button>
                     ) : button && !hide ? (
                         <>
-                        <button onClick={() => !setHide(!hide)}>
-                            hide
-                        </button>
                         </>
                     ) : (
                         <>
@@ -90,9 +87,6 @@ return (
                         </button>
                     ) : button1 && !hide1 ? (
                         <>
-                        <button onClick={() => !setHide1(!hide1)}>
-                            hide
-                        </button>
                         </>
                     ) : (
                         <>
