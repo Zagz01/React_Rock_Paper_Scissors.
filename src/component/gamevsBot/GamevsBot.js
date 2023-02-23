@@ -3,7 +3,7 @@ import "./GamevsBot.css"
 
 const options = ['Rock', 'Paper', 'Scissors'];
 
-const Game = (e) => {
+const Game = () => {
 const [playerChoice, setPlayerChoice] = useState(null);
 const [computerChoice, setComputerChoice] = useState(null);
 const [result, setResult] = useState(null);
