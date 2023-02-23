@@ -1,0 +1,31 @@
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.box button{
+    width: 30%;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none !important;
+}
+.show1 {
+    display: block;
+}
+
+.hidden1 {
+    display: none !important;
+}
+
+.custom{
+    margin-bottom: 50px;
+}

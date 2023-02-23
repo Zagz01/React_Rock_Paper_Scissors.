@@ -1,23 +1,67 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import AgainstComputer from './component/gamevsBot/GamevsBot';
+import AgainstPlayer from './component/GamevsPlayer/GamevsPlayer';
 
 function App() {
+  const [againstComputer, setAgainstComputer] = useState(false);
+  const [againstPlayer, setAgainstPlayer] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+          <div className="App">
+            <h1>Rock Paper Scissors</h1>
+            <div>
+            {
+              !againstPlayer && !againstComputer ? (
+                <>
+                  <button onClick={() => {
+                    setAgainstPlayer(true);
+                    setAgainstComputer(false);
+                  }}>
+                    Play against a player
+                  </button>
+                  <button onClick={() => {
+                    setAgainstComputer(true);
+                    setAgainstPlayer(false);
+                  }}>
+                    Play against the computer
+                  </button>
+                </>
+              ) : againstPlayer ? (
+                  <button onClick={() => {
+                    setAgainstComputer(true);
+                    setAgainstPlayer(false);
+                  }}>
+                    Play against the computer
+                  </button>
+              ) : (
+                  <button onClick={() => {
+                    setAgainstPlayer(true);
+                    setAgainstComputer(false);
+                  }}>
+                    Play against a player
+                  </button>
+                )
+              }          
+        
+              </div>
+            {againstComputer ? <AgainstComputer /> : "" }
+            {againstPlayer ? <AgainstPlayer/> : ""}
+            <div>
+        {
+          againstPlayer || againstComputer ? (
+            <button onClick={() => {
+              setAgainstComputer(false)
+              setAgainstPlayer(false)
+            }}>
+              Home Page
+            </button>
+            ) : (
+              <>
+              </>
+            )
+          }
+      </div>
     </div>
   );
 }
