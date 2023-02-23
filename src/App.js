@@ -11,7 +11,7 @@ function App() {
           <div className="App">
             <h1>Rock Paper Scissors Game</h1>
             <span>Put your browser screen at full screen for a more immersive gameplay</span>
-            <div>
+            <>
             {
               !againstPlayer && !againstComputer ? (
                 <div>
@@ -45,7 +45,7 @@ function App() {
                 )
               }          
         
-              </div>
+              </>
             {againstComputer ? <AgainstComputer /> : "" }
             {againstPlayer ? <AgainstPlayer/> : ""}
             <div>
