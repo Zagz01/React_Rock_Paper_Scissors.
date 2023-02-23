@@ -12,7 +12,11 @@ body{
     background-color: RGBA(108,101,80,0.85);
     width: 50%;
     margin: 5% auto;
+    color: white;
+
 }
+
+
 
 .App button{
     margin: 2.5% 1%;
