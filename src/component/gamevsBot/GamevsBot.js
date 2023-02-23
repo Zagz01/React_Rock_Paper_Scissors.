@@ -76,7 +76,7 @@ return (
             handleReset()}}>Reset</button>
     </div>
     <div>
-        {result && <p>{result}</p>}
+        <p>{result}</p>
     </div>
     </div>
 );
