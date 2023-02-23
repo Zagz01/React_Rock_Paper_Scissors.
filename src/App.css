@@ -13,3 +13,8 @@ body{
     width: 50%;
     margin: 5% auto;
 }
+
+.App button{
+    margin: 2.5% 1%;
+    border-radius: 15px;
+}
