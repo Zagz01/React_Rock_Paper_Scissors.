@@ -32,7 +32,7 @@ const handlePlayerChoice = (option) => {
             (option === 'Paper' && computerOption === 'Rock') ||
             (option === 'Scissors' && computerOption === 'Paper')
         ) {
-            setResult(`The player won with ${option} and computer lost with ${computerOption}`);
+            setResult(`The player won with ${option} and the computer lost with ${computerOption}`);
         } else {
             setResult(`The computer won with ${computerOption} and the player lost with ${option}`);
     }

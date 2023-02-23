@@ -38,9 +38,9 @@ useEffect(() => {
             || (playerChoice === 'Paper' && player2Choice === 'Rock') 
             || (playerChoice === 'Scissors' && player2Choice === 'Paper')
         ) {
-            setResult(`The player won with ${playerChoice} and player 2 lost with ${player2Choice}`);
+            setResult(`The player won with ${playerChoice} and the player 2 lost with ${player2Choice}`);
         } else {
-            setResult(`The player 2 won with ${player2Choice} and player lost with ${playerChoice}`);
+            setResult(`The player 2 won with ${player2Choice} and the player lost with ${playerChoice}`);
         }
     }
 }, [playerChoice, player2Choice]);
