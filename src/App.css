@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
 body{
     height: calc(100vh - 1px);
     width: calc(100vw - 17px);
@@ -16,10 +18,7 @@ body{
     margin: 5% auto;
     color: white;
     font-family: 'Fraunces', serif;
-
 }
-
-
 
 .App button{
     margin: 2.5% 2%;
