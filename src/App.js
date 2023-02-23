@@ -10,6 +10,7 @@ function App() {
   return (
           <div className="App">
             <h1>Rock Paper Scissors Game</h1>
+            <span>Put your browser screen at full screen for a more immersive gameplay</span>
             <div>
             {
               !againstPlayer && !againstComputer ? (
