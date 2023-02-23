@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './App.css';
 import AgainstComputer from './component/gamevsBot/GamevsBot';
 import AgainstPlayer from './component/GamevsPlayer/GamevsPlayer';
-import img from "./img/2.jpg"
 
 function App() {
   const [againstComputer, setAgainstComputer] = useState(false);
@@ -11,7 +10,6 @@ function App() {
   return (
           <div className="App">
             <h1>Rock Paper Scissors Game</h1>
-            <img className='homePageIMG' src={img} alt='home page'></img>
             <div>
             {
               !againstPlayer && !againstComputer ? (
