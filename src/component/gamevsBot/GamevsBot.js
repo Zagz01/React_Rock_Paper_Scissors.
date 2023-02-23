@@ -32,9 +32,9 @@ const handlePlayerChoice = (option) => {
             (option === 'Paper' && computerOption === 'Rock') ||
             (option === 'Scissors' && computerOption === 'Paper')
         ) {
-            setResult('You win!');
+            setResult(`player won with ${option} and computer lost with ${computerOption}`);
         } else {
-            setResult('You lose!');
+            setResult(`The computer won with ${computerOption} and the player lost with ${option}`);
     }
 };
 
@@ -66,7 +66,7 @@ return (
     </div>
     <div>
         <h2>Computer</h2>
-        {computerChoice && <p>{computerChoice}</p>}
+        <p>{computerChoice}</p>
     </div>
     <div>
         <button className={visible ? "hidden" : "true"}  onClick={() =>{
