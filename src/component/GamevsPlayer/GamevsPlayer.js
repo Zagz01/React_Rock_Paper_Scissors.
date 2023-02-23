@@ -123,7 +123,14 @@ return (
                 handleReset()}}>Reset</button>
         </div>
         <div>
-            <p>{result}</p>
+            {
+                !hide && !hide1 ? (
+                    <p>{result}</p>
+                ): (
+                    <>
+                    </>
+                )
+            }
         </div>
         </div>
     );
