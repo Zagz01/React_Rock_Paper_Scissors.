@@ -1,4 +1,4 @@
-import "./GamevsBot.css"
+import "./GamevsPlayer.css"
 import React, { useEffect, useState } from 'react';
 
 const options = ['Rock', 'Paper', 'Scissors'];
@@ -10,7 +10,10 @@ const [result, setResult] = useState(null);
 const [show, setShow] = useState(true)
 const [show1, setShow1] = useState(false)
 const [visible, setVisible] = useState(false)
-
+const [hide, setHide] = useState(false)
+const [hide1, setHide1] = useState(false)
+const [button, setButton] = useState(false)
+const [button1, setButton1] = useState(false)
 
 const handlePlayerChoice = (option) => {
     setPlayerChoice(option);
@@ -46,9 +49,29 @@ return (
     <div>
         <div className='box'>
             <h2>Player</h2>
-            <p>{playerChoice}</p>
+            <div className={hide ? "hide" : "notHide"}>
+                <p>{playerChoice}</p>
+                {
+                    button && hide ? (
+                        <button onClick={() => !setHide(!hide)}>
+                            show
+                        </button>
+                    ) : button && !hide ? (
+                        <>
+                        <button onClick={() => !setHide(!hide)}>
+                            hide
+                        </button>
+                        </>
+                    ) : (
+                        <>
+                        </>
+                    )
+                }
+            </div>
             {options.map((option) => (
             <button className={show ? "show" : "hidden" } key={option} onClick={() => {
+                setHide(true)
+                setButton(true)
                 setShow(!show)
                 setShow1(!show1)
                 handlePlayerChoice(option)}}>
@@ -58,9 +81,30 @@ return (
         </div>
         <div className='box custom'>
             <h2>Player2</h2>
+            <div className={hide1 ? "hide1" : "notHide1"}>
             <p>{player2Choice}</p>
+                {
+                    button1 && hide1 ? (
+                        <button onClick={() => !setHide1(!hide1)}>
+                            show
+                        </button>
+                    ) : button1 && !hide1 ? (
+                        <>
+                        <button onClick={() => !setHide1(!hide1)}>
+                            hide
+                        </button>
+                        </>
+                    ) : (
+                        <>
+                        </>
+                    )
+                }
+            </div>
+
             {options.map((option) => (
             <button className={show1 ? "show1" : "hidden1" } key={option} onClick={() => {
+                setHide1(true)
+                setButton1(true)
                 setShow1(!show1)
                 setVisible(!visible)
             handlePlayer2Choice(option)}}>
@@ -70,6 +114,10 @@ return (
         </div>
         <div>
             <button className={visible ? "" : "hidden"} onClick={() => {
+                setButton(false)
+                setHide(false)
+                setButton1(false)
+                setHide1(false)
                 setVisible(!visible)
                 setShow(!show)
                 handleReset()}}>Reset</button>

@@ -33,3 +33,26 @@
 .custom{
     margin-bottom: 50px;
 }
+
+.hide{
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+    width: 40%;
+}
+
+.notHide{
+    z-index: 0;
+    width: 40%;
+}
+.hide1{
+    background-color: white;
+    z-index: 1;
+    cursor: pointer;
+    width: 40%;
+}
+
+.notHide1{
+    z-index: 0;
+    width: 40%;
+}
