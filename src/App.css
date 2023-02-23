@@ -22,4 +22,6 @@ body{
     margin: 2.5% 1%;
     border-radius: 15px;
     padding: 1%;
+    background-color: green;
+    color: white;
 }
