@@ -31,17 +31,17 @@ const handlePlayer2Choice = (option) => {
 
 useEffect(() => {
     if (playerChoice && player2Choice) {
-    if (playerChoice === player2Choice) {
-        setResult('Tie!');
-    } else if (
-        (playerChoice === 'Rock' && player2Choice === 'Scissors') 
-        || (playerChoice === 'Paper' && player2Choice === 'Rock') 
-        || (playerChoice === 'Scissors' && player2Choice === 'Paper')
-    ) {
-        setResult('You win!');
-    } else {
-        setResult('You lose!');
-    }
+        if (playerChoice === player2Choice) {
+            setResult('Tie!');
+        } else if (
+            (playerChoice === 'Rock' && player2Choice === 'Scissors') 
+            || (playerChoice === 'Paper' && player2Choice === 'Rock') 
+            || (playerChoice === 'Scissors' && player2Choice === 'Paper')
+        ) {
+            setResult(`player won with ${playerChoice} and player 2 lost with ${player2Choice}`);
+        } else {
+            setResult(`player 2 won with ${player2Choice} and player lost with ${playerChoice}`);
+        }
     }
 }, [playerChoice, player2Choice]);
 

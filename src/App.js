@@ -48,8 +48,8 @@ function App() {
             {againstComputer ? <AgainstComputer /> : "" }
             {againstPlayer ? <AgainstPlayer/> : ""}
             <div>
-        {
-          againstPlayer || againstComputer ? (
+            {
+            againstPlayer || againstComputer ? (
             <button onClick={() => {
               setAgainstComputer(false)
               setAgainstPlayer(false)
@@ -61,8 +61,8 @@ function App() {
               </>
             )
           }
+          </div>
       </div>
-    </div>
   );
 }
 

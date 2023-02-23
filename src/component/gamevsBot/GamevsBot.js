@@ -26,15 +26,15 @@ const handlePlayerChoice = (option) => {
     setComputerChoice(computerOption);
 
     if (option === computerOption) {
-    setResult('Tie!');
-    } else if (
-    (option === 'Rock' && computerOption === 'Scissors') ||
-    (option === 'Paper' && computerOption === 'Rock') ||
-    (option === 'Scissors' && computerOption === 'Paper')
-    ) {
-    setResult('You win!');
-    } else {
-    setResult('You lose!');
+        setResult('Tie!');
+        } else if (
+            (option === 'Rock' && computerOption === 'Scissors') ||
+            (option === 'Paper' && computerOption === 'Rock') ||
+            (option === 'Scissors' && computerOption === 'Paper')
+        ) {
+            setResult('You win!');
+        } else {
+            setResult('You lose!');
     }
 };
 
